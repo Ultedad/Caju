@@ -1,0 +1,53 @@
+Package calculadora;
+
+Helpers
+ digito = ['0' .. '9'];
+ letra = ['a' .. 'z'] | ['A' .. 'Z'];
+ espaco = ' ';
+ sinal = ( '+' | '-' );
+ rc = 13;
+ nl = 10;
+ 
+Tokens
+ tipo_base = ( 'numero' | 'booleano' | 'caractere');
+ comando = ( 'se' | 'para' | 'para cada' | 'enquanto' );
+ comeco_bloco = 'inicio';
+ final_bloco = 'fim';
+ id = letra ((letra | digito)+)?;
+ palavra = letra+;
+ inteiro = (sinal)? digito+;
+ ponto_final = '.';
+ virgula = ',';
+ ponto_virgula = ';';
+ 
+ soma = '+';
+ menos = '-';
+ mult = '*';
+ div = '/';
+ mod = '%';
+ maior_que = '>';
+ menor_que = '<';
+ maior_igual_que = '>=';
+ menor_igual_que = '<=';
+ 
+ atrib = ':=';
+ igual = '=';
+ negacao = 'nao';
+ and = 'e';
+ or = 'ou';
+ barra_reta = '|';
+ 
+ aspas_simples = ''';
+ quebra_linha = '\n';
+ converter_string = '"';
+ colch_esq = '[';
+ colch_dir = ']';
+ par_esq = '(';
+ par_dir = ')';
+ dois_pontos = ':';
+ vazio = (espaco | rc | nl)+;
+
+
+Ignored Tokens
+ vazio;
+
