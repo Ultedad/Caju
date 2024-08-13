@@ -5,14 +5,14 @@ package calculadora.node;
 import calculadora.analysis.*;
 
 @SuppressWarnings("nls")
-public final class TTipoBase extends Token
+public final class TNumero extends Token
 {
-    public TTipoBase(String text)
+    public TNumero(String text)
     {
         setText(text);
     }
 
-    public TTipoBase(String text, int line, int pos)
+    public TNumero(String text, int line, int pos)
     {
         setText(text);
         setLine(line);
@@ -22,12 +22,12 @@ public final class TTipoBase extends Token
     @Override
     public Object clone()
     {
-      return new TTipoBase(getText(), getLine(), getPos());
+      return new TNumero(getText(), getLine(), getPos());
     }
 
     @Override
     public void apply(Switch sw)
     {
-        ((Analysis) sw).caseTTipoBase(this);
+        ((Analysis) sw).caseTNumero(this);
     }
 }

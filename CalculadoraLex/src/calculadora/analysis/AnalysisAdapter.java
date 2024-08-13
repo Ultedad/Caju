@@ -69,13 +69,79 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseTTipoBase(TTipoBase node)
+    public void caseTTipoNumero(TTipoNumero node)
     {
         defaultCase(node);
     }
 
     @Override
-    public void caseTComando(TComando node)
+    public void caseTTipoBooleano(TTipoBooleano node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTTipoCaractere(TTipoCaractere node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTTipoVetor(TTipoVetor node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTComandoSe(TComandoSe node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTComandoSenao(TComandoSenao node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTComandoPara(TComandoPara node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTComandoParaCada(TComandoParaCada node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTComandoEnquanto(TComandoEnquanto node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTRetorna(TRetorna node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTExibir(TExibir node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTLer(TLer node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTBooleano(TBooleano node)
     {
         defaultCase(node);
     }
@@ -105,7 +171,7 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseTInteiro(TInteiro node)
+    public void caseTNumero(TNumero node)
     {
         defaultCase(node);
     }
@@ -219,19 +285,7 @@ public class AnalysisAdapter implements Analysis
     }
 
     @Override
-    public void caseTAspasSimples(TAspasSimples node)
-    {
-        defaultCase(node);
-    }
-
-    @Override
-    public void caseTQuebraLinha(TQuebraLinha node)
-    {
-        defaultCase(node);
-    }
-
-    @Override
-    public void caseTConverterString(TConverterString node)
+    public void caseTTab(TTab node)
     {
         defaultCase(node);
     }
@@ -268,6 +322,36 @@ public class AnalysisAdapter implements Analysis
 
     @Override
     public void caseTVazio(TVazio node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTQuebraLinha(TQuebraLinha node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTCaractere(TCaractere node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTString(TString node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTComentarioLinha(TComentarioLinha node)
+    {
+        defaultCase(node);
+    }
+
+    @Override
+    public void caseTComentarioBloco(TComentarioBloco node)
     {
         defaultCase(node);
     }

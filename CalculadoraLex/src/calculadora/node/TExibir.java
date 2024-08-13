@@ -5,16 +5,16 @@ package calculadora.node;
 import calculadora.analysis.*;
 
 @SuppressWarnings("nls")
-public final class TAspasSimples extends Token
+public final class TExibir extends Token
 {
-    public TAspasSimples()
+    public TExibir()
     {
-        super.setText("\'");
+        super.setText("exibir");
     }
 
-    public TAspasSimples(int line, int pos)
+    public TExibir(int line, int pos)
     {
-        super.setText("\'");
+        super.setText("exibir");
         setLine(line);
         setPos(pos);
     }
@@ -22,18 +22,18 @@ public final class TAspasSimples extends Token
     @Override
     public Object clone()
     {
-      return new TAspasSimples(getLine(), getPos());
+      return new TExibir(getLine(), getPos());
     }
 
     @Override
     public void apply(Switch sw)
     {
-        ((Analysis) sw).caseTAspasSimples(this);
+        ((Analysis) sw).caseTExibir(this);
     }
 
     @Override
     public void setText(@SuppressWarnings("unused") String text)
     {
-        throw new RuntimeException("Cannot change TAspasSimples text.");
+        throw new RuntimeException("Cannot change TExibir text.");
     }
 }

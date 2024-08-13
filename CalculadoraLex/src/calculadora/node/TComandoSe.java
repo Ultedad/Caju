@@ -5,16 +5,16 @@ package calculadora.node;
 import calculadora.analysis.*;
 
 @SuppressWarnings("nls")
-public final class TConverterString extends Token
+public final class TComandoSe extends Token
 {
-    public TConverterString()
+    public TComandoSe()
     {
-        super.setText("\"");
+        super.setText("se");
     }
 
-    public TConverterString(int line, int pos)
+    public TComandoSe(int line, int pos)
     {
-        super.setText("\"");
+        super.setText("se");
         setLine(line);
         setPos(pos);
     }
@@ -22,18 +22,18 @@ public final class TConverterString extends Token
     @Override
     public Object clone()
     {
-      return new TConverterString(getLine(), getPos());
+      return new TComandoSe(getLine(), getPos());
     }
 
     @Override
     public void apply(Switch sw)
     {
-        ((Analysis) sw).caseTConverterString(this);
+        ((Analysis) sw).caseTComandoSe(this);
     }
 
     @Override
     public void setText(@SuppressWarnings("unused") String text)
     {
-        throw new RuntimeException("Cannot change TConverterString text.");
+        throw new RuntimeException("Cannot change TComandoSe text.");
     }
 }

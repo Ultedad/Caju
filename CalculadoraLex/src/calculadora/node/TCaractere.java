@@ -5,14 +5,14 @@ package calculadora.node;
 import calculadora.analysis.*;
 
 @SuppressWarnings("nls")
-public final class TQuebraLinha extends Token
+public final class TCaractere extends Token
 {
-    public TQuebraLinha(String text)
+    public TCaractere(String text)
     {
         setText(text);
     }
 
-    public TQuebraLinha(String text, int line, int pos)
+    public TCaractere(String text, int line, int pos)
     {
         setText(text);
         setLine(line);
@@ -22,12 +22,12 @@ public final class TQuebraLinha extends Token
     @Override
     public Object clone()
     {
-      return new TQuebraLinha(getText(), getLine(), getPos());
+      return new TCaractere(getText(), getLine(), getPos());
     }
 
     @Override
     public void apply(Switch sw)
     {
-        ((Analysis) sw).caseTQuebraLinha(this);
+        ((Analysis) sw).caseTCaractere(this);
     }
 }

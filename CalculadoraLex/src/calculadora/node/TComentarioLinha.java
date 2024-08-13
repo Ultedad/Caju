@@ -5,14 +5,14 @@ package calculadora.node;
 import calculadora.analysis.*;
 
 @SuppressWarnings("nls")
-public final class TComando extends Token
+public final class TComentarioLinha extends Token
 {
-    public TComando(String text)
+    public TComentarioLinha(String text)
     {
         setText(text);
     }
 
-    public TComando(String text, int line, int pos)
+    public TComentarioLinha(String text, int line, int pos)
     {
         setText(text);
         setLine(line);
@@ -22,12 +22,12 @@ public final class TComando extends Token
     @Override
     public Object clone()
     {
-      return new TComando(getText(), getLine(), getPos());
+      return new TComentarioLinha(getText(), getLine(), getPos());
     }
 
     @Override
     public void apply(Switch sw)
     {
-        ((Analysis) sw).caseTComando(this);
+        ((Analysis) sw).caseTComentarioLinha(this);
     }
 }

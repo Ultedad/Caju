@@ -19,6 +19,12 @@ inicio
     fim
 fim
 
+{ 
+asdas
+asdasdas
+asddas
+}
+
 vazio exibirLista(vetor numero[] lista | numero n)
 inicio
     numero i.
